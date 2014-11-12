@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="fr.utbm.core.entity.Station" table="station" catalog="lp76">
+		<id name="id" type="int" column="Sta_Id">
+			<generator class="assigned" />
+		</id>
+		<property name="label" type="string" column="Sta_Label" />
+		<many-to-one name="area" column="Are_Id" class="fr.utbm.core.entity.Area" />
+		<property name="lastCommunicationDate" type="timestamp" column="Sta_LastCom" />
+		<property name="valid" type="boolean" column="Sta_Valid" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="fr.utbm.core.entity.Temperature" table="temperature" catalog="lp76">
+		<id name="id" type="int" column="TMP_ID">
+			<generator class="assigned" />
+		</id>
+		<property name="value" type="float" column="TMP_VALUE" />
+		<property name="date" type="timestamp" column="TMP_DATE" />
+		<many-to-one name="sensor" column="SEN_ID" class="fr.utbm.core.entity.Sensor" />
+	</class>
+</hibernate-mapping>
