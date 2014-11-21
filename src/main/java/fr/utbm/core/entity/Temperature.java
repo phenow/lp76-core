@@ -1,5 +1,9 @@
 package fr.utbm.core.entity;
 
+import fr.utbm.core.CoreDateFormat;
+import fr.utbm.dao.DaoFactory;
+
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Temperature {
@@ -52,5 +56,14 @@ public class Temperature {
 	@Override
 	public String toString() {
 		return String.valueOf(getValue());
+	}
+
+	public void setSensorId(int id) {
+		setSensor(DaoFactory.getSensorDao().findById(id));
+	}
+
+	public String getFormattedDate() {
+		SimpleDateFormat dateFormat = new CoreDateFormat();
+		return dateFormat.format(getDate());
 	}
 }

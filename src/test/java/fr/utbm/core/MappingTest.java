@@ -181,22 +181,22 @@ public class MappingTest {
 	}
 
 	private Set<Station> getStationsSet() {
-		return new HashSet<>(DaoFactory.getStationDao().getAll());
+		return new HashSet<Station>(DaoFactory.getStationDao().getAll());
 	}
 
 	private Set<Temperature> getTemperaturesSet() {
-		return new HashSet<>(DaoFactory.getTemperatureDao().getAll());
+		return new HashSet<Temperature>(DaoFactory.getTemperatureDao().getAll());
 	}
 
 	private Set<Trigger> getTriggersSet() {
-		return new HashSet<>(DaoFactory.getTriggerDao().getAll());
+		return new HashSet<Trigger>(DaoFactory.getTriggerDao().getAll());
 	}
 
 	private Set<Sensor> getSensorsSet() {
-		return new HashSet<>(DaoFactory.getSensorDao().getAll());
+		return new HashSet<Sensor>(DaoFactory.getSensorDao().getAll());
 	}
 
 	private Set<AlertHistory> getAlertHistoriesSet() {
-		return new HashSet<>(DaoFactory.getAlertHistoryDao().getAll());
+		return new HashSet<AlertHistory>(DaoFactory.getAlertHistoryDao().getAll());
 	}
 }
